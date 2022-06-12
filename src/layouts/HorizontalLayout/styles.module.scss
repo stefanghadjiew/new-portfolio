@@ -1,0 +1,10 @@
+.horizontal {
+    display: flex;
+    color: var(--color);
+    background-color: var(--background-color);
+}
+
+.horizontal__dark-theme {
+    color: var(--color-dark-theme);
+    background-color: var(--background-color-dark-theme);
+}

@@ -1,0 +1,11 @@
+.vertical {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--color);
+}
+
+.vertical__dark-theme {
+    background-color: var(--background-color-dark-theme);
+    color: var(--color-dark-theme);
+}
