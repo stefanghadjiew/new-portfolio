@@ -1,17 +1,15 @@
 .section {
-    min-height: 100vh;
     position: relative;
 }
 
 .section__left-side {
-    width: 25vw;
+    width: calc(200px + 8rem);
     height: 100vh;
     background-color: var(--background-color-lighter-blue);
 }
 
 .section__right-side {
-    width: 75vw;
-    height: 100vh;
+    width: calc(100% - 200px - 8rem);
     background-color: var(--background-color-white);
 }
 
