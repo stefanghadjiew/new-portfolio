@@ -21,16 +21,61 @@ code {
 }
 
 :root {
+    /*new color setup */
+    --white-color: #fff;
+    --light-blue-color: #b3e1ed;
+    --lighter-blue-color: #d1dee1;
+    --dark-blue-color: #1f2b3f;
+    --light-red-color: #c25d78;
+
     --background-color-white: #fff;
     --background-color-light-blue: #b3e1ed;
     --background-color-lighter-blue: #d1dee1;
     --background-color-dark-theme: #17202a;
-    --text-color: #17202a;
+    --text-color: #1f2b3f;
     --text-color-dark-theme: #fff;
     --light-red-color: #c25d78;
+    --icon-btn-color: #1f2b3f; /*make this the text color*/
 }
 
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-center {
+    display: block;
+    margin: auto;
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.small-padding-x {
+    padding: 0 1rem;
+}
+
+.medium-padding-x {
+    padding: 0 2rem;
+}
+
+.large-padding-x {
+    padding: 0 8rem;
+}
+
+.full-container-height {
+    height: 100%;
+}
+
+.full-container-size {
+    height: 100%;
+    width: 100%;
 }
