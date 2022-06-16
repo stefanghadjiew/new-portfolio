@@ -19,7 +19,7 @@
         height: 100%;
         width: 200px;
         left: 0;
-        background-color: var(--background-color-lighter-blue);
+        background-color: var(--lighter-blue-color);
     }
 
     .card-container__bottom {
@@ -27,7 +27,7 @@
         height: 200px;
         width: 100%;
         bottom: 0;
-        background-color: var(--background-color-lighter-blue);
+        background-color: var(--lighter-blue-color);
     }
 
     .card-container__large-quadrant-top-right {
@@ -46,7 +46,7 @@
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        background-color: var(--background-color-lighter-blue);
+        background-color: var(--lighter-blue-color);
         top: -100px;
         right: -100px;
     }
@@ -67,7 +67,7 @@
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        background-color: var(--background-color-lighter-blue);
+        background-color: var(--lighter-blue-color);
         bottom: -100px;
         left: -100px;
     }

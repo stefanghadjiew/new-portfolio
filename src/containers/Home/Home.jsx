@@ -5,10 +5,15 @@ import styles from './styles.module.scss';
 import { AiFillPhone } from 'react-icons/ai';
 import { MdLocationOn, MdEmail } from 'react-icons/md';
 
-export const Home = () => {
+export const Home = ({ darkTheme }) => {
+    const email = 'cheffo0odev@abv.bg';
+    const phone = '+(359)899928238';
+    const location = 'Varna, BG';
+
     return (
         <div className={styles.home}>
             <Section
+                darkTheme={darkTheme}
                 id="home"
                 titleType="h2"
                 title="Personal Portfolio"
@@ -26,13 +31,34 @@ export const Home = () => {
                             <Divider width="50%" />
                             <div className={styles.contacts}>
                                 <div className={styles.email}>
-                                    <MdEmail /> cheffo0odev@abv.bg
+                                    <MdEmail
+                                        className={
+                                            darkTheme
+                                                ? 'svg-dark-theme'
+                                                : ''
+                                        }
+                                    />{' '}
+                                    {email}
                                 </div>
                                 <div className={styles.phone}>
-                                    <AiFillPhone /> +(359)899928238
+                                    <AiFillPhone
+                                        className={
+                                            darkTheme
+                                                ? 'svg-dark-theme'
+                                                : ''
+                                        }
+                                    />{' '}
+                                    {phone}
                                 </div>
                                 <div className={styles.location}>
-                                    <MdLocationOn /> Varna, BG
+                                    <MdLocationOn
+                                        className={
+                                            darkTheme
+                                                ? 'svg-dark-theme'
+                                                : ''
+                                        }
+                                    />{' '}
+                                    {location}
                                 </div>
                             </div>
                         </div>

@@ -6,11 +6,6 @@ export const CardContainer = ({ children }) => {
         <div className={styles['card-container']}>
             <div
                 className={
-                    styles['card-container__large-quadrant-top-right']
-                }
-            />
-            <div
-                className={
                     styles['card-container__small-quadrant-top-right']
                 }
             />

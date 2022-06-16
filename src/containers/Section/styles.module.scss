@@ -1,16 +1,22 @@
 .section {
     position: relative;
+    background-color: var(--white-color);
+    color: var(--dark-blue-color);
 }
 
 .section__left-side {
     width: calc(200px + 8rem);
     height: 100vh;
-    background-color: var(--background-color-lighter-blue);
+    background-color: var(--lighter-blue-color);
 }
 
 .section__right-side {
     width: calc(100% - 200px - 8rem);
-    background-color: var(--background-color-white);
+}
+
+.section-dark-theme {
+    background-color: var(--dark-blue-color);
+    color: var(--white-color);
 }
 
 .section__content {

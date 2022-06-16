@@ -5,10 +5,14 @@ import { Navbar } from './components';
 function App() {
     const [darkTheme, setDarkTheme] = useState(false);
 
+    const changeTheme = () => {
+        setDarkTheme(prevState => !prevState);
+    };
+
     return (
         <Fragment>
-            <Navbar />
-            <Home />
+            <Navbar darkTheme={darkTheme} changeTheme={changeTheme} />
+            <Home darkTheme={darkTheme} />
         </Fragment>
     );
 }

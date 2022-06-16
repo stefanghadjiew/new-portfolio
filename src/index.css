@@ -28,14 +28,20 @@ code {
     --dark-blue-color: #1f2b3f;
     --light-red-color: #c25d78;
 
-    --background-color-white: #fff;
-    --background-color-light-blue: #b3e1ed;
-    --background-color-lighter-blue: #d1dee1;
-    --background-color-dark-theme: #17202a;
     --text-color: #1f2b3f;
     --text-color-dark-theme: #fff;
     --light-red-color: #c25d78;
     --icon-btn-color: #1f2b3f; /*make this the text color*/
+}
+
+.dark-theme {
+    background-color: var(--dark-blue-color);
+    color: var(--white-color);
+}
+
+.light-theme {
+    background-color: var(--white-color);
+    color: var(--dark-blue-color);
 }
 
 .flex-column {
@@ -78,4 +84,15 @@ code {
 .full-container-size {
     height: 100%;
     width: 100%;
+}
+
+svg {
+    height: 24px;
+    width: 24px;
+    color: var(--dark-blue-color);
+    transition: color 0.2s ease-in-out;
+}
+
+.svg-dark-theme {
+    color: var(--white-color);
 }
