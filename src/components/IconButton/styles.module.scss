@@ -5,18 +5,22 @@
     cursor: pointer;
     background-color: transparent;
     transition: background-color 0.2s ease-in-out;
+}
 
+.button-light-theme {
     &:hover {
-        background-color: var(--icon-btn-color);
+        background-color: var(--dark-blue-color);
         svg {
-            color: var(--background-color-white);
+            color: var(--white-color);
         }
     }
+}
 
-    svg {
-        height: 24px;
-        width: 24px;
-        color: var(--icon-btn-color);
-        transition: color 0.2s ease-in-out;
+.button-dark-theme {
+    &:hover {
+        background-color: var(--white-color);
+        svg {
+            color: var(--dark-blue-color);
+        }
     }
 }
