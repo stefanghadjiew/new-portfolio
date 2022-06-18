@@ -11,19 +11,13 @@ export const Navbar = ({ darkTheme, changeTheme }) => {
     const buttons = [
         {
             id: 'home',
-            icon: (
-                <AiFillHome
-                    className={darkTheme ? 'svg-dark-theme' : ''}
-                />
-            ),
+            icon: <AiFillHome className={darkTheme && 'svg-dark-theme'} />,
             tooltip: 'Home',
         },
         {
             id: 'github',
             icon: (
-                <AiFillGithub
-                    className={darkTheme ? 'svg-dark-theme' : ''}
-                />
+                <AiFillGithub className={darkTheme && 'svg-dark-theme'} />
             ),
             tooltip: 'Github',
         },
@@ -31,7 +25,7 @@ export const Navbar = ({ darkTheme, changeTheme }) => {
             id: 'linkedIn',
             icon: (
                 <AiFillLinkedin
-                    className={darkTheme ? 'svg-dark-theme' : ''}
+                    className={darkTheme && 'svg-dark-theme'}
                 />
             ),
             tooltip: 'LinkedIn',
@@ -40,7 +34,7 @@ export const Navbar = ({ darkTheme, changeTheme }) => {
             id: 'resume',
             icon: (
                 <MdFileDownload
-                    className={darkTheme ? 'svg-dark-theme' : ''}
+                    className={darkTheme && 'svg-dark-theme'}
                 />
             ),
             tooltip: 'My resume',
@@ -48,20 +42,16 @@ export const Navbar = ({ darkTheme, changeTheme }) => {
         {
             id: 'facebook',
             icon: (
-                <FaFacebookF
-                    className={darkTheme ? 'svg-dark-theme' : ''}
-                />
+                <FaFacebookF className={darkTheme && 'svg-dark-theme'} />
             ),
             tooltip: 'Facebook',
         },
         {
             id: 'theme',
             icon: darkTheme ? (
-                <GiMoon className={darkTheme ? 'svg-dark-theme' : ''} />
+                <GiMoon className={darkTheme && 'svg-dark-theme'} />
             ) : (
-                <BsFillSunFill
-                    className={darkTheme ? 'svg-dark-theme' : ''}
-                />
+                <BsFillSunFill className={darkTheme && 'svg-dark-theme'} />
             ),
             tooltip: darkTheme ? 'Light theme' : 'Dark theme',
             onClick: changeTheme,

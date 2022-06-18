@@ -112,3 +112,55 @@ svg {
     display: flex;
     backdrop-filter: blur(4px);
 }
+
+.image {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+}
+
+.mui {
+    color: #3f51b5;
+}
+
+.react {
+    color: #61dbfb;
+}
+
+.node {
+    color: #303030;
+}
+
+.mongo {
+    color: #4db33d;
+}
+
+.express {
+    color: var(--dark-blue-color);
+}
+
+.sass {
+    color: #cd6799;
+}
+
+.css {
+    color: #264de4;
+}
+
+.js {
+    color: #f0db4f;
+}
+
+.cypress {
+    color: #303030;
+}
+
+.jest {
+    color: #c63d14;
+}

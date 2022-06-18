@@ -18,7 +18,7 @@ export const Section = ({
             id={sectionId}
             style={{ height }}
             className={`${styles.section} ${
-                darkTheme ? styles['section-dark-theme'] : ''
+                darkTheme && styles['section-dark-theme']
             }`}
         >
             <HorizontalLayout>
