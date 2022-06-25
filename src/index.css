@@ -142,7 +142,7 @@ svg {
 }
 
 .express {
-    color: var(--dark-blue-color);
+    color: black;
 }
 
 .sass {
@@ -163,4 +163,14 @@ svg {
 
 .jest {
     color: #c63d14;
+}
+
+.html {
+    color: #f06529;
+}
+
+.playground {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
 }

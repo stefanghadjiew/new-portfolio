@@ -1,11 +1,11 @@
 import React from 'react';
 import { Section, CardContainer } from 'containers';
-import { Divider, Subtitle, Title } from 'components';
+import { Divider, Subtitle, Title, Technologies } from 'components';
 import styles from './styles.module.scss';
 import { AiFillPhone } from 'react-icons/ai';
 import { MdLocationOn, MdEmail } from 'react-icons/md';
 
-export const Home = ({ darkTheme }) => {
+export const Home = ({ darkTheme, setOpenPortal }) => {
     const email = 'cheffo0odev@abv.bg';
     const phone = '+(359)899928238';
     const location = 'Varna, BG';
@@ -20,7 +20,10 @@ export const Home = ({ darkTheme }) => {
                 height="100vh"
             >
                 <div className="full-container-height flex-center large-padding-x">
-                    <CardContainer>
+                    <CardContainer
+                        darkTheme={darkTheme}
+                        setOpenPortal={setOpenPortal}
+                    >
                         <div className="block-center">
                             <Subtitle text="Hi there, I am" />
                             <Title
@@ -60,6 +63,7 @@ export const Home = ({ darkTheme }) => {
                                     />{' '}
                                     {location}
                                 </div>
+                                <Technologies />
                             </div>
                         </div>
                     </CardContainer>
