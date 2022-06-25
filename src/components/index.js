@@ -1,4 +1,5 @@
 export * from './Button';
+export * from './LinkButton';
 export * from './Card';
 export * from './IconButton';
 export * from './Navbar';

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { Button } from 'components';
+import { Button, LinkButton } from 'components';
 
 export const CardContainer = ({ children, darkTheme, setOpenPortal }) => {
     return (
@@ -22,6 +22,11 @@ export const CardContainer = ({ children, darkTheme, setOpenPortal }) => {
                     darkTheme={darkTheme}
                     onClick={() => setOpenPortal(true)}
                 />
+                {/* <LinkButton
+                    text="My Projects"
+                    darkTheme={darkTheme}
+                    onClick={() => setOpenPortal(true)}
+                /> */}
             </div>
             <div
                 className={

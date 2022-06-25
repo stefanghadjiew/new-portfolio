@@ -1,0 +1,80 @@
+.link-button__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    svg {
+        color: var(--light-red-color);
+        &:first-child {
+            animation: mooveSvgRight 1s infinite;
+        }
+        &:last-child {
+            animation: mooveSvgLeft 1s infinite;
+        }
+    }
+
+    .link-button {
+        position: relative;
+        font-size: 1.5rem;
+        cursor: pointer;
+        outline: 0;
+        border: 0;
+        transition: all 0.2s ease-in-out;
+        letter-spacing: 0.05rem;
+        font-weight: 700;
+        animation: mymove 5s infinite;
+        background: 0;
+
+        &:hover {
+            transform: scale(1.02);
+            &::before {
+                width: 100%;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            width: 0;
+            transition: all 0.2s ease-in-out;
+            background-color: var(--light-red-color);
+        }
+    }
+
+    .link-button-light-theme {
+        color: var(--dark-blue-color);
+    }
+
+    .link-button-dark-theme {
+        color: var(--white-color);
+    }
+}
+
+@keyframes mooveSvgLeft {
+    0% {
+        transform: translateX(1.25px);
+    }
+    50% {
+        transform: translateX(-1.25px);
+    }
+    100% {
+        transform: translateX(1.25px);
+    }
+}
+
+@keyframes mooveSvgRight {
+    0% {
+        transform: translateX(-1.25px);
+    }
+    50% {
+        transform: translateX(1.25px);
+    }
+    100% {
+        transform: translateX(-1.25px);
+    }
+}
