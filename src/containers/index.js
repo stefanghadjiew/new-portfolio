@@ -7,3 +7,4 @@ export * from './Header';
 export * from './Section';
 export * from './CardContainer';
 export * from './BackdropPortal';
+export * from './Carousel';

@@ -7,3 +7,4 @@ export * from './Title';
 export * from './Divider';
 export * from './ClickawayListener';
 export * from './Image';
+export * from './Technologies';

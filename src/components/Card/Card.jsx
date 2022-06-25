@@ -27,18 +27,19 @@ export const Card = ({ darkTheme, title, backgroundImage }) => {
                 darkTheme && styles['card__wrapper-dark-theme']
             }`}
         >
-            <div
-                className={`${styles['card__top-style']} ${
-                    darkTheme && styles['card__top-style-dark-theme']
-                }`}
-            />
             <div className={styles.card}>
                 <Image src={backgroundImage} />
 
                 <div className={styles['card__content']}>
-                    {currentProject.technologies}
+                    <div className={styles['card__content-technologies']}>
+                        {currentProject.technologies}
+                    </div>
                 </div>
-                <div className={styles['card__actions']}>
+                <div
+                    className={`${styles['card__actions']} ${
+                        darkTheme ? styles['card__actions-dark-theme'] : ''
+                    }`}
+                >
                     {renderActionsButtons}
                 </div>
             </div>

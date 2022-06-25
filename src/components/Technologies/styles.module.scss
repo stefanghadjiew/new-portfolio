@@ -1,0 +1,12 @@
+.technologies-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+
+    svg {
+        height: 45px;
+        width: 45px;
+        vertical-align: middle;
+    }
+}

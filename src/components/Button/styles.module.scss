@@ -1,0 +1,67 @@
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    svg {
+        color: var(--dark-blue-color);
+        &:first-child {
+            animation: mooveSvgRight 1s infinite;
+        }
+        &:last-child {
+            animation: mooveSvgLeft 1s infinite;
+        }
+    }
+
+    .button {
+        padding: 1rem 4rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        outline: 0;
+        border: 0;
+        box-shadow: 5px 7.5px 6px 7px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease-in-out;
+        letter-spacing: 0.05rem;
+        font-weight: 700;
+        animation: mymove 5s infinite;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    .button-light-theme {
+        background-color: var(--white-color);
+        color: var(--dark-blue-color);
+    }
+
+    .button-dark-theme {
+        background-color: var(--dark-blue-color);
+        color: var(--white-color);
+    }
+}
+
+@keyframes mooveSvgLeft {
+    0% {
+        transform: translateX(1.25px);
+    }
+    50% {
+        transform: translateX(-1.25px);
+    }
+    100% {
+        transform: translateX(1.25px);
+    }
+}
+
+@keyframes mooveSvgRight {
+    0% {
+        transform: translateX(-1.25px);
+    }
+    50% {
+        transform: translateX(1.25px);
+    }
+    100% {
+        transform: translateX(-1.25px);
+    }
+}

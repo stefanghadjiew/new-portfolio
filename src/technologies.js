@@ -7,6 +7,7 @@ import {
     SiJavascript,
     SiCypress,
     SiJest,
+    SiHtml5,
 } from 'react-icons/si';
 
 export const technologiesIcons = {
@@ -20,4 +21,5 @@ export const technologiesIcons = {
     Javascript: <SiJavascript className="icon js" />,
     Cypress: <SiCypress className="icon cypress" />,
     Jest: <SiJest className="icon jest" />,
+    Html: <SiHtml5 className="icon html" />,
 };
