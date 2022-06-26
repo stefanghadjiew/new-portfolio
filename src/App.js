@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Home, BackdropPortal } from 'containers';
-import { Navbar } from './components';
+import { Navbar, Card } from './components';
+import { images } from './assests';
 
 function App() {
     const [darkTheme, setDarkTheme] = useState(false);
@@ -21,6 +22,21 @@ function App() {
                 backdropComponent={backdropComponent}
                 setBackdropComponent={setBackdropComponent}
             />
+            <div
+                style={{
+                    display: 'flex',
+                    width: '100vw',
+                    height: '100vh',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
+            >
+                <Card
+                    title="Budget Planner"
+                    darkTheme={darkTheme}
+                    backgroundImage={images.budgetPlanner}
+                />
+            </div>
         </Fragment>
     );
 }
