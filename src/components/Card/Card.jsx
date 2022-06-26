@@ -31,7 +31,17 @@ export const Card = ({ darkTheme, title, backgroundImage }) => {
                 <Image src={backgroundImage} />
 
                 <div className={styles['card__content']}>
-                    <div className={styles['card__content-technologies']}>
+                    <div
+                        className={`${
+                            styles['card__content-technologies']
+                        } ${
+                            darkTheme
+                                ? styles[
+                                      'card__content-technologies-dark-theme'
+                                  ]
+                                : ''
+                        }`}
+                    >
                         {currentProject.technologies}
                     </div>
                 </div>
