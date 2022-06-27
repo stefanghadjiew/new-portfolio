@@ -8,3 +8,4 @@ export * from './Section';
 export * from './CardContainer';
 export * from './BackdropPortal';
 export * from './Carousel';
+export * from './Grid';

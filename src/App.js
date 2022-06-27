@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Home, BackdropPortal } from 'containers';
-import { Navbar, Card } from './components';
-import { images } from './assests';
+import { Navbar } from './components';
 
 function App() {
     const [darkTheme, setDarkTheme] = useState(false);
@@ -15,28 +14,17 @@ function App() {
     return (
         <Fragment>
             <Navbar darkTheme={darkTheme} changeTheme={changeTheme} />
-            <Home darkTheme={darkTheme} setOpenPortal={setOpenPortal} />
+            <Home
+                darkTheme={darkTheme}
+                setOpenPortal={setOpenPortal}
+                setBackdropComponent={setBackdropComponent}
+            />
             <BackdropPortal
                 openPortal={openPortal}
                 setOpenPortal={setOpenPortal}
                 backdropComponent={backdropComponent}
                 setBackdropComponent={setBackdropComponent}
             />
-            <div
-                style={{
-                    display: 'flex',
-                    width: '100vw',
-                    height: '100vh',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}
-            >
-                <Card
-                    title="Budget Planner"
-                    darkTheme={darkTheme}
-                    backgroundImage={images.budgetPlanner}
-                />
-            </div>
         </Fragment>
     );
 }

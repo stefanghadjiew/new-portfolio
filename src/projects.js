@@ -1,10 +1,18 @@
 import { technologiesIcons } from 'technologies';
+import { images } from './assests';
+
+const projectTitles = {
+    PersonalOrganizer: 'PersonalOrganizer',
+    BudgetPlanner: 'Budget Planner',
+    Photoverse: 'Photoverse',
+    Portfolio: 'Portfolio',
+};
 
 export const projects = [
     {
         id: 1,
-        title: 'Personal Organizer',
-        images: [],
+        title: projectTitles.PersonalOrganizer,
+        backgroundImage: images.personalOrganizer,
         technologies: [
             technologiesIcons.CSS3,
             technologiesIcons.Cypress,
@@ -18,8 +26,8 @@ export const projects = [
     },
     {
         id: 2,
-        title: 'Budget Planner',
-        imgages: [],
+        title: projectTitles.BudgetPlanner,
+        backgroundImage: images.budgetPlanner,
         technologies: [
             technologiesIcons.MUI,
             technologiesIcons.Cypress,
@@ -33,8 +41,8 @@ export const projects = [
     },
     {
         id: 3,
-        title: 'Photoverse',
-        images: [],
+        title: projectTitles.Photoverse,
+        backgroundImage: images.photoverse,
         technologies: [
             technologiesIcons.MUI,
             technologiesIcons.Cypress,
@@ -47,8 +55,8 @@ export const projects = [
     },
     {
         id: 4,
-        title: 'Portfolio',
-        images: [],
+        title: projectTitles.Portfolio,
+        backgroundImage: images.photoverse,
         technologies: [
             technologiesIcons.Javascript,
             technologiesIcons.ReactJs,
