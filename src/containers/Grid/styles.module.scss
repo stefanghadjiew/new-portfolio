@@ -1,0 +1,24 @@
+.grid__container {
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .grid {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+
+        .grid__item {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+        }
+    }
+}

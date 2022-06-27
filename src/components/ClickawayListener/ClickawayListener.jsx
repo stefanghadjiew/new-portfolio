@@ -6,7 +6,11 @@ export const ClickawayListener = ({
     children,
 }) => {
     const handleClickAway = e => {
-        if (e.target.className.includes('click-away-listener')) {
+        if (
+            e.target.className.includes('click-away-listener') ||
+            e.target.className.includes('grid__container') ||
+            e.target.className.includes('grid')
+        ) {
             setOpenPortal(false);
             setBackdropComponent(null);
         }

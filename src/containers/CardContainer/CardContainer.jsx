@@ -1,8 +1,26 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { Button, LinkButton } from 'components';
+import { Button, Card } from 'components';
+import { Grid } from 'containers';
+import { projects } from 'projects';
 
-export const CardContainer = ({ children, darkTheme, setOpenPortal }) => {
+export const CardContainer = ({
+    children,
+    darkTheme,
+    setOpenPortal,
+    setBackdropComponent,
+}) => {
+    const projectCards = projects.map(project => (
+        <Card
+            key={project.id}
+            title={project.title}
+            darkTheme={darkTheme}
+            backgroundImage={project.backgroundImage}
+        />
+    ));
+
+    const backdropComponent = <Grid>{projectCards}</Grid>;
+
     return (
         <div className={styles['card-container']}>
             <div
@@ -20,13 +38,11 @@ export const CardContainer = ({ children, darkTheme, setOpenPortal }) => {
                 <Button
                     text="My Projects"
                     darkTheme={darkTheme}
-                    onClick={() => setOpenPortal(true)}
+                    onClick={() => {
+                        setOpenPortal(true);
+                        setBackdropComponent(backdropComponent);
+                    }}
                 />
-                {/* <LinkButton
-                    text="My Projects"
-                    darkTheme={darkTheme}
-                    onClick={() => setOpenPortal(true)}
-                /> */}
             </div>
             <div
                 className={

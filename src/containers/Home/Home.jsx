@@ -5,7 +5,11 @@ import styles from './styles.module.scss';
 import { AiFillPhone } from 'react-icons/ai';
 import { MdLocationOn, MdEmail } from 'react-icons/md';
 
-export const Home = ({ darkTheme, setOpenPortal }) => {
+export const Home = ({
+    darkTheme,
+    setOpenPortal,
+    setBackdropComponent,
+}) => {
     const email = 'cheffo0odev@abv.bg';
     const phone = '+(359)899928238';
     const location = 'Varna, BG';
@@ -21,6 +25,7 @@ export const Home = ({ darkTheme, setOpenPortal }) => {
             >
                 <div className="full-container-height flex-center large-padding-x">
                     <CardContainer
+                        setBackdropComponent={setBackdropComponent}
                         darkTheme={darkTheme}
                         setOpenPortal={setOpenPortal}
                     >
