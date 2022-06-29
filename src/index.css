@@ -20,6 +20,116 @@ code {
     margin: 0;
 }
 
+/* when converting to scss -> variables partial */
+
+/* $white-color: #fff;
+$light-blue-color: #b3e1ed;
+$lighter-blue-color: #d1dee1;
+$dark-blue-color: #1f2b3f;
+$light-red-color: #c25d78;
+$portal-element-background: rgba(0, 0, 0, 0.8); 
+*/
+
+/* technologies icons -> techIcons partial
+.mui {
+    color: #3f51b5;
+}
+
+.react {
+    color: #61dbfb;
+}
+
+.node {
+    color: #303030;
+}
+
+.mongo {
+    color: #4db33d;
+}
+
+.express {
+    color: black;
+}
+
+.sass {
+    color: #cd6799;
+}
+
+.css {
+    color: #264de4;
+}
+
+.js {
+    color: #f0db4f;
+}
+
+.cypress {
+    color: #303030;
+}
+
+.jest {
+    color: #c63d14;
+}
+
+.html {
+    color: #f06529;
+}
+
+*/
+
+/* mixins -> mixins partial */
+
+/* @mixin dark-theme {
+    background-color: $dark-blue-color;
+    color: $white-color;
+}
+
+@mixin light-theme {
+    background-color: $white-color;
+    color: $dark-blue-color;
+}
+
+@mixin border-dark-theme {
+    border: 1px solid $white-color;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin block-center {
+    display: block;
+    margin: auto;
+}
+
+@mixin flex-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@mixin full-container-size {
+    height: 100%;
+    width: 100%;
+}
+
+@mixin svg-icon {
+    height: 24px;
+    width: 24px;
+    color: $dark-blue-color;
+    transition: color 0.2s ease-in-out;
+}
+
+@mixin svg-icon-dark-theme {
+    color: $white-color;
+} */
+
 :root {
     /*new color setup */
     --white-color: #fff;
@@ -28,11 +138,6 @@ code {
     --dark-blue-color: #1f2b3f;
     --light-red-color: #c25d78;
     --portal-element-background: rgba(0, 0, 0, 0.8);
-
-    --text-color: #1f2b3f;
-    --text-color-dark-theme: #fff;
-    --light-red-color: #c25d78;
-    --icon-btn-color: #1f2b3f; /*make this the text color*/
 }
 
 .dark-theme {
@@ -74,8 +179,12 @@ code {
     padding: 0 2rem;
 }
 
-.large-padding-x {
+.even-large-padding-x {
     padding: 0 8rem;
+}
+
+.odd-large-padding-x {
+    padding: 0 2rem 0 14rem;
 }
 
 .full-container-height {
@@ -122,6 +231,17 @@ svg {
 .icon__wrapper {
     width: 50px;
     height: 50px;
+}
+
+.circle-icon__wrapper {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color);
+    box-shadow: 5px 7.5px 6px 7px rgba(0, 0, 0, 0.2);
 }
 
 .icon {
@@ -172,10 +292,4 @@ svg {
 
 .html {
     color: #f06529;
-}
-
-.playground {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
 }

@@ -22,6 +22,7 @@ export const projects = [
             technologiesIcons.NodeJs,
             technologiesIcons.ReactJs,
             technologiesIcons.Javascript,
+            technologiesIcons.Html,
         ],
     },
     {
@@ -37,6 +38,7 @@ export const projects = [
             technologiesIcons.Jest,
             technologiesIcons.MongoDB,
             technologiesIcons.NodeJs,
+            technologiesIcons.Html,
         ],
     },
     {
@@ -51,6 +53,7 @@ export const projects = [
             technologiesIcons.ReactJs,
             technologiesIcons.Jest,
             technologiesIcons.NodeJs,
+            technologiesIcons.Html,
         ],
     },
     {
@@ -61,6 +64,7 @@ export const projects = [
             technologiesIcons.Javascript,
             technologiesIcons.ReactJs,
             technologiesIcons.SASS,
+            technologiesIcons.Html,
         ],
     },
 ];

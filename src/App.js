@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { Home, BackdropPortal } from 'containers';
+import { Home, Projects, BackdropPortal } from 'containers';
 import { Navbar } from './components';
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
                 setOpenPortal={setOpenPortal}
                 setBackdropComponent={setBackdropComponent}
             />
+            <Projects darkTheme={darkTheme} />
             <BackdropPortal
                 openPortal={openPortal}
                 setOpenPortal={setOpenPortal}

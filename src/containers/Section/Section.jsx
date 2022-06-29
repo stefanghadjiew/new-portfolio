@@ -1,4 +1,4 @@
-import React, { useId } from 'react';
+import React from 'react';
 import styles from './styles.module.scss';
 import { HorizontalLayout } from '../../layouts';
 import { Title } from 'components';
@@ -11,14 +11,12 @@ export const Section = ({
     titleType = 'h1',
     darkTheme,
 }) => {
-    const sectionId = `${id}-section--${useId()}`;
-
     return (
         <section
-            id={sectionId}
+            id={id}
             style={{ height }}
             className={`${styles.section} ${
-                darkTheme && styles['section-dark-theme']
+                darkTheme && styles['section--dark-theme']
             }`}
         >
             <HorizontalLayout>
@@ -28,9 +26,9 @@ export const Section = ({
                 >
                     <Title text={title} type={titleType} />
                 </div>
-                <div className={styles['section__content']}>
+                <main className={styles['section__content']}>
                     {children}
-                </div>
+                </main>
             </HorizontalLayout>
         </section>
     );
