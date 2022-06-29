@@ -6,12 +6,16 @@
     box-shadow: 10px 15px 12px 14px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 
-    .card-container__content {
+    .card__container-content {
         position: absolute;
         width: calc(100% - 200px);
         height: calc(100% - 180px);
         left: 200px;
         bottom: 180px;
+    }
+
+    .card__container-contet-dark-theme {
+        border: 1px solid var(--white-color);
     }
 
     .card-container__left {

@@ -1,11 +1,13 @@
-.button-wrapper {
+.button__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    border: 2px solid;
 
     svg {
-        color: var(--dark-blue-color);
+        color: var(--light-red-color);
         &:first-child {
             animation: mooveSvgRight 1s infinite;
         }
@@ -15,12 +17,10 @@
     }
 
     .button {
-        padding: 1rem 4rem;
-        border-radius: 4px;
         cursor: pointer;
         outline: 0;
         border: 0;
-        box-shadow: 5px 7.5px 6px 7px rgba(0, 0, 0, 0.2);
+        background: 0;
         transition: all 0.2s ease-in-out;
         letter-spacing: 0.05rem;
         font-weight: 700;
@@ -30,14 +30,15 @@
             transform: scale(1.02);
         }
     }
+}
 
-    .button-light-theme {
-        background-color: var(--white-color);
-        color: var(--dark-blue-color);
-    }
+.button__wrapper-light-theme {
+    border-color: var(--white-color);
+}
 
-    .button-dark-theme {
-        background-color: var(--dark-blue-color);
+.button__wrapper-dark-theme {
+    border-color: var(--dark-blue-color);
+    .button {
         color: var(--white-color);
     }
 }

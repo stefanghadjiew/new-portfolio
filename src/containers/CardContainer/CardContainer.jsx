@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { Button, Card } from 'components';
-import { Grid } from 'containers';
-import { projects } from 'projects';
+import { Button } from 'components';
 
 export const CardContainer = ({
     children,
@@ -10,17 +8,6 @@ export const CardContainer = ({
     setOpenPortal,
     setBackdropComponent,
 }) => {
-    const projectCards = projects.map(project => (
-        <Card
-            key={project.id}
-            title={project.title}
-            darkTheme={darkTheme}
-            backgroundImage={project.backgroundImage}
-        />
-    ));
-
-    const backdropComponent = <Grid>{projectCards}</Grid>;
-
     return (
         <div className={styles['card-container']}>
             <div
@@ -29,7 +16,13 @@ export const CardContainer = ({
                 }
             />
             <div
-                className={`${styles['card-container__content']} flex-start`}
+                className={`${
+                    styles['card__container-content']
+                } flex-start ${
+                    darkTheme
+                        ? styles['card__container-contet-dark-theme']
+                        : ''
+                }`}
             >
                 {children}
             </div>
@@ -39,8 +32,9 @@ export const CardContainer = ({
                     text="My Projects"
                     darkTheme={darkTheme}
                     onClick={() => {
-                        setOpenPortal(true);
-                        setBackdropComponent(backdropComponent);
+                        document
+                            .getElementById('projects-section')
+                            .scrollIntoView({ behavior: 'smooth' });
                     }}
                 />
             </div>

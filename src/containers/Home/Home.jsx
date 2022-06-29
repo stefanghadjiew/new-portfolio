@@ -1,19 +1,16 @@
 import React from 'react';
 import { Section, CardContainer } from 'containers';
-import { Divider, Subtitle, Title, Technologies } from 'components';
+import { Divider, Subtitle, Title } from 'components';
 import styles from './styles.module.scss';
 import { AiFillPhone } from 'react-icons/ai';
 import { MdLocationOn, MdEmail } from 'react-icons/md';
+import { personalInfo } from 'personalInfo';
 
 export const Home = ({
     darkTheme,
     setOpenPortal,
     setBackdropComponent,
 }) => {
-    const email = 'cheffo0odev@abv.bg';
-    const phone = '+(359)899928238';
-    const location = 'Varna, BG';
-
     return (
         <div className={styles.home}>
             <Section
@@ -23,7 +20,7 @@ export const Home = ({
                 title="Personal Portfolio"
                 height="100vh"
             >
-                <div className="full-container-height flex-center large-padding-x">
+                <div className="full-container-height flex-center even-large-padding-x">
                     <CardContainer
                         setBackdropComponent={setBackdropComponent}
                         darkTheme={darkTheme}
@@ -46,7 +43,7 @@ export const Home = ({
                                                 : ''
                                         }
                                     />{' '}
-                                    {email}
+                                    {personalInfo.email}
                                 </div>
                                 <div className={styles.phone}>
                                     <AiFillPhone
@@ -56,7 +53,7 @@ export const Home = ({
                                                 : ''
                                         }
                                     />{' '}
-                                    {phone}
+                                    {personalInfo.phone}
                                 </div>
                                 <div className={styles.location}>
                                     <MdLocationOn
@@ -66,9 +63,8 @@ export const Home = ({
                                                 : ''
                                         }
                                     />{' '}
-                                    {location}
+                                    {personalInfo.location}
                                 </div>
-                                <Technologies />
                             </div>
                         </div>
                     </CardContainer>

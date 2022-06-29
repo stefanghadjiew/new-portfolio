@@ -1,0 +1,17 @@
+.content {
+    position: relative;
+    height: calc(100% - 90.55px);
+    width: 100%;
+    top: 40px;
+
+    .grid__wrapper {
+        width: 100%;
+        height: calc(100% - 2rem);
+        border-radius: 1rem;
+        box-shadow: 10px 15px 12px 14px rgba(0, 0, 0, 0.2);
+
+        &--dark-theme {
+            border: 1px solid var(--white-color);
+        }
+    }
+}
