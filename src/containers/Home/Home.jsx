@@ -1,6 +1,6 @@
 import React from 'react';
 import { Section, CardContainer } from 'containers';
-import { Divider, Subtitle, Title } from 'components';
+import { Divider, Subtitle, BigTitle, CustomLink } from 'components';
 import styles from './styles.module.scss';
 import { AiFillPhone } from 'react-icons/ai';
 import { MdLocationOn, MdEmail } from 'react-icons/md';
@@ -25,46 +25,46 @@ export const Home = ({
                         setBackdropComponent={setBackdropComponent}
                         darkTheme={darkTheme}
                         setOpenPortal={setOpenPortal}
-                    >
-                        <div className="block-center">
-                            <Subtitle text="Hi there, I am" />
-                            <Title
-                                style={{ padding: '.5rem 0' }}
-                                text="Stefan Hadzhiev"
+                        bottomChild={
+                            <CustomLink
+                                text="My Projects"
+                                hrefId="#projects-section"
+                                darkTheme={darkTheme}
+                                svgDirection="down"
                             />
-                            <Subtitle text="Frontend web developer" />
-                            <Divider width="50%" />
-                            <div className={styles.contacts}>
-                                <div className={styles.email}>
-                                    <MdEmail
-                                        className={
-                                            darkTheme
-                                                ? 'svg-dark-theme'
-                                                : ''
-                                        }
-                                    />{' '}
-                                    {personalInfo.email}
-                                </div>
-                                <div className={styles.phone}>
-                                    <AiFillPhone
-                                        className={
-                                            darkTheme
-                                                ? 'svg-dark-theme'
-                                                : ''
-                                        }
-                                    />{' '}
-                                    {personalInfo.phone}
-                                </div>
-                                <div className={styles.location}>
-                                    <MdLocationOn
-                                        className={
-                                            darkTheme
-                                                ? 'svg-dark-theme'
-                                                : ''
-                                        }
-                                    />{' '}
-                                    {personalInfo.location}
-                                </div>
+                        }
+                    >
+                        <Subtitle text="Hi there, I am" />
+                        <BigTitle
+                            style={{ padding: '.5rem 0' }}
+                            text="Stefan Hadzhiev"
+                        />
+                        <Subtitle text="Frontend web developer" />
+                        <Divider width="50%" />
+                        <div className={styles.contacts}>
+                            <div className={styles.email}>
+                                <MdEmail
+                                    className={
+                                        darkTheme ? 'svg-dark-theme' : ''
+                                    }
+                                />{' '}
+                                {personalInfo.email}
+                            </div>
+                            <div className={styles.phone}>
+                                <AiFillPhone
+                                    className={
+                                        darkTheme ? 'svg-dark-theme' : ''
+                                    }
+                                />{' '}
+                                {personalInfo.phone}
+                            </div>
+                            <div className={styles.location}>
+                                <MdLocationOn
+                                    className={
+                                        darkTheme ? 'svg-dark-theme' : ''
+                                    }
+                                />{' '}
+                                {personalInfo.location}
                             </div>
                         </div>
                     </CardContainer>

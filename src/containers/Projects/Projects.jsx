@@ -22,7 +22,7 @@ export const Projects = ({ darkTheme }) => {
             title="Projects"
             height="100vh"
         >
-            <div className="full-container-height flex-center odd-large-padding-x">
+            <div className="full-container-height flex-center even-large-padding-x">
                 <div className={styles['content']}>
                     <div
                         className={`${styles['grid__wrapper']} ${

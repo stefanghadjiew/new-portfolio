@@ -1,0 +1,56 @@
+.link {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+    background: 0;
+    text-decoration: none;
+
+    span {
+        margin-right: 1rem;
+    }
+
+    .icon__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        border-radius: 9999px;
+        svg {
+            color: var(--light-red-color);
+            animation: mooveSvgRight 1s infinite;
+        }
+
+        &--light-theme {
+            border: 1px solid var(--white-color);
+        }
+
+        &--dark-theme {
+            border: 1px solid var(--dark-blue-color);
+        }
+    }
+
+    &--light-theme {
+        color: var(--dark-blue-color);
+    }
+
+    &--dark-theme {
+        color: var(--white-color);
+    }
+}
+
+@keyframes mooveSvgRight {
+    0% {
+        transform: translateY(-1.25px);
+    }
+    50% {
+        transform: translateY(1.25px);
+    }
+    100% {
+        transform: translateY(-1.25px);
+    }
+}

@@ -1,0 +1,33 @@
+.big-title {
+    padding-top: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    z-index: 3;
+    h1 {
+        font-weight: 800;
+        font-size: 3rem;
+    }
+}
+
+.title {
+    padding-top: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    z-index: 3;
+    h2 {
+        font-weight: 300;
+        font-size: 2rem;
+    }
+}
+
+.subtitle {
+    h3 {
+        font-weight: 400;
+    }
+}
+
+.paragraph {
+    margin-right: 4rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
