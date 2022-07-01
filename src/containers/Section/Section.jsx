@@ -14,7 +14,7 @@ export const Section = ({
     return (
         <section
             id={id}
-            style={{ height }}
+            style={{ minHeight: height }}
             className={`${styles.section} ${
                 darkTheme && styles['section--dark-theme']
             }`}

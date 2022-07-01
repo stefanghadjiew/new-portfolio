@@ -138,6 +138,7 @@ $portal-element-background: rgba(0, 0, 0, 0.8);
     --dark-blue-color: #1f2b3f;
     --light-red-color: #c25d78;
     --portal-element-background: rgba(0, 0, 0, 0.8);
+    scroll-behavior: smooth;
 }
 
 .dark-theme {
@@ -161,9 +162,9 @@ $portal-element-background: rgba(0, 0, 0, 0.8);
     align-items: center;
 }
 
-.block-center {
+.block-mg-6-l {
     display: block;
-    margin: auto;
+    margin: auto 0 auto 6rem;
 }
 
 .flex-start {
@@ -189,6 +190,10 @@ $portal-element-background: rgba(0, 0, 0, 0.8);
 
 .full-container-height {
     height: 100%;
+}
+
+.full-container-width {
+    width: 100%;
 }
 
 .full-container-size {
