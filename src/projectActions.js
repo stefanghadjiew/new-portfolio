@@ -8,7 +8,9 @@ export const projectActions = darkTheme => [
             id: 1,
             title: 'Details',
             icon: (
-                <CgDetailsMore className={darkTheme && 'svg-dark-theme'} />
+                <CgDetailsMore
+                    className={darkTheme && 'svg--dark-theme'}
+                />
             ),
         },
     },
@@ -17,7 +19,7 @@ export const projectActions = darkTheme => [
             id: 2,
             title: 'Github',
             icon: (
-                <AiFillGithub className={darkTheme && 'svg-dark-theme'} />
+                <AiFillGithub className={darkTheme && 'svg--dark-theme'} />
             ),
         },
     },
@@ -25,7 +27,7 @@ export const projectActions = darkTheme => [
         action: {
             id: 3,
             title: 'Preview',
-            icon: <MdPreview className={darkTheme && 'svg-dark-theme'} />,
+            icon: <MdPreview className={darkTheme && 'svg--dark-theme'} />,
         },
     },
 ];
