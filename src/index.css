@@ -27,8 +27,8 @@ $light-blue-color: #b3e1ed;
 $lighter-blue-color: #d1dee1;
 $dark-blue-color: #1f2b3f;
 $light-red-color: #c25d78;
-$portal-element-background: rgba(0, 0, 0, 0.8); 
-*/
+$portal-element-background: rgba(0, 0, 0, 0.8);
+ */
 
 /* technologies icons -> techIcons partial
 .mui {
@@ -128,7 +128,11 @@ $portal-element-background: rgba(0, 0, 0, 0.8);
 
 @mixin svg-icon-dark-theme {
     color: $white-color;
-} */
+} 
+@mixin background-transition {
+    transition: background-color 0.2s ease-in-out; 
+}
+*/
 
 :root {
     /*new color setup */
@@ -208,7 +212,7 @@ svg {
     transition: color 0.2s ease-in-out;
 }
 
-.svg-dark-theme {
+.svg--dark-theme {
     color: var(--white-color);
 }
 

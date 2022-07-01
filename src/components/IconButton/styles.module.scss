@@ -5,22 +5,22 @@
     cursor: pointer;
     background-color: transparent;
     transition: background-color 0.2s ease-in-out;
-}
 
-.button-light-theme {
-    &:hover {
-        background-color: var(--dark-blue-color);
-        svg {
-            color: var(--white-color);
+    &--light-theme {
+        &:hover {
+            background-color: var(--dark-blue-color);
+            svg {
+                color: var(--white-color);
+            }
         }
     }
-}
 
-.button-dark-theme {
-    &:hover {
-        background-color: var(--white-color);
-        svg {
-            color: var(--dark-blue-color);
+    &--dark-theme {
+        &:hover {
+            background-color: var(--white-color);
+            svg {
+                color: var(--dark-blue-color);
+            }
         }
     }
 }

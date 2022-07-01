@@ -6,8 +6,8 @@ export const IconButton = ({ icon, tooltip, onClick, darkTheme }) => {
         <button
             className={`${styles['button']} ${
                 darkTheme
-                    ? styles['button-dark-theme']
-                    : styles['button-light-theme']
+                    ? styles['button--dark-theme']
+                    : styles['button--light-theme']
             }`}
             onClick={onClick}
         >

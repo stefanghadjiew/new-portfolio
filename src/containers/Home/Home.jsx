@@ -45,7 +45,7 @@ export const Home = ({
                             <div className={styles.email}>
                                 <MdEmail
                                     className={
-                                        darkTheme ? 'svg-dark-theme' : ''
+                                        darkTheme ? 'svg--dark-theme' : ''
                                     }
                                 />{' '}
                                 {personalInfo.email}
@@ -53,7 +53,7 @@ export const Home = ({
                             <div className={styles.phone}>
                                 <AiFillPhone
                                     className={
-                                        darkTheme ? 'svg-dark-theme' : ''
+                                        darkTheme ? 'svg--dark-theme' : ''
                                     }
                                 />{' '}
                                 {personalInfo.phone}
@@ -61,7 +61,7 @@ export const Home = ({
                             <div className={styles.location}>
                                 <MdLocationOn
                                     className={
-                                        darkTheme ? 'svg-dark-theme' : ''
+                                        darkTheme ? 'svg--dark-theme' : ''
                                     }
                                 />{' '}
                                 {personalInfo.location}

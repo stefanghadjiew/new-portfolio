@@ -1,0 +1,27 @@
+.icon-button__container {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 4;
+    transition: background-color 0.2s ease-in-out;
+
+    button {
+        svg {
+            color: var(--light-red-color);
+        }
+        //overwrite the default styles for IconButton
+        &:hover {
+            svg {
+                color: var(--light-red-color);
+            }
+        }
+    }
+
+    &--light-theme {
+        background-color: var(--dark-blue-color);
+    }
+
+    &--dark-theme {
+        background-color: var(--white-color);
+    }
+}

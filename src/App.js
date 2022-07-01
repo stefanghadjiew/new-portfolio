@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Home, Projects, About, BackdropPortal } from 'containers';
-import { Navbar } from './components';
+import { Navbar, ScrollToTopButton } from 'components';
 
 function App() {
     const [darkTheme, setDarkTheme] = useState(true);
@@ -27,6 +27,7 @@ function App() {
                 backdropComponent={backdropComponent}
                 setBackdropComponent={setBackdropComponent}
             />
+            <ScrollToTopButton darkTheme={darkTheme} />
         </Fragment>
     );
 }
