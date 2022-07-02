@@ -40,11 +40,7 @@ export const CustomLink = ({
         >
             <span>{text}</span>
             <div
-                className={`${styles['icon__wrapper']} ${
-                    darkTheme
-                        ? styles['icon__wrapper--dark-theme']
-                        : styles['icon__wrapper--light-theme']
-                }`}
+                className={`${styles['icon__wrapper']} ${styles['spin']} ${styles['circle']}`}
             >
                 {determineSvgDirection()}
             </div>
