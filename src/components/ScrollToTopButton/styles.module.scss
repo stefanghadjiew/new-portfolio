@@ -4,6 +4,7 @@
     right: 40px;
     z-index: 4;
     transition: background-color 0.2s ease-in-out;
+    box-shadow: 6px 7px 7px 8px rgba(0, 0, 0, 0.2);
 
     button {
         svg {
@@ -18,10 +19,10 @@
     }
 
     &--light-theme {
-        background-color: var(--dark-blue-color);
+        background-color: var(--white-color);
     }
 
     &--dark-theme {
-        background-color: var(--white-color);
+        background-color: var(--dark-blue-color);
     }
 }
