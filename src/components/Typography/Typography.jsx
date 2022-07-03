@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import { Emoji } from 'components';
 
 export const BigTitle = ({ text, type = 'h1', style }) => {
     return (
@@ -17,10 +18,17 @@ export const Title = ({ text, style }) => {
     );
 };
 
-export const Subtitle = ({ text, type = 'h3' }) => {
+export const Subtitle = ({ text, type = 'h3', emoji }) => {
     return (
         <div className={styles.subtitle}>
-            {type === 'h3' ? <h3>{text}</h3> : <h4>{text}</h4>}
+            {type === 'h3' ? (
+                <h3>
+                    {emoji && <Emoji emoji={emoji} />}
+                    {text}
+                </h3>
+            ) : (
+                <h4>{text}</h4>
+            )}
         </div>
     );
 };

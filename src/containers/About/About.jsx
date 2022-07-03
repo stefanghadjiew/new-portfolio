@@ -2,6 +2,7 @@ import React from 'react';
 import { Section, CardContainer } from 'containers';
 import { Paragraph, CustomLink } from 'components';
 import { aboutMeSubtitle } from 'staticResources';
+import { scrollToSection } from 'utils';
 
 export const About = ({ darkTheme }) => {
     return (
@@ -18,7 +19,11 @@ export const About = ({ darkTheme }) => {
                     bottomChild={
                         <CustomLink
                             text="Read my full story"
-                            hrefId="#projects-section"
+                            onClick={() => {
+                                scrollToSection({
+                                    sectionId: 'projects-section',
+                                });
+                            }}
                             darkTheme={darkTheme}
                             svgDirection="right"
                         />

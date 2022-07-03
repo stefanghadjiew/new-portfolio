@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Home, Projects, About, BackdropPortal } from 'containers';
-import { Navbar, ScrollToTopButton } from 'components';
+import { Navbar, NavigationDots, ScrollToTopButton } from 'components';
 
 function App() {
     const [darkTheme, setDarkTheme] = useState(true);
@@ -14,6 +14,7 @@ function App() {
     return (
         <Fragment>
             <Navbar darkTheme={darkTheme} changeTheme={changeTheme} />
+            <NavigationDots darkTheme={darkTheme} />
             <Home
                 darkTheme={darkTheme}
                 setOpenPortal={setOpenPortal}
