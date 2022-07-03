@@ -5,6 +5,7 @@ import styles from './styles.module.scss';
 import { AiFillPhone } from 'react-icons/ai';
 import { MdLocationOn, MdEmail } from 'react-icons/md';
 import { personalInfo } from 'personalInfo';
+import { scrollToSection } from 'utils';
 
 export const Home = ({
     darkTheme,
@@ -15,7 +16,7 @@ export const Home = ({
         <div className={styles.home}>
             <Section
                 darkTheme={darkTheme}
-                id="home"
+                id="home-section"
                 titleType="h2"
                 title="Personal Portfolio"
                 height="100vh"
@@ -27,14 +28,18 @@ export const Home = ({
                         setOpenPortal={setOpenPortal}
                         bottomChild={
                             <CustomLink
+                                onClick={() => {
+                                    scrollToSection({
+                                        sectionId: 'projects-section',
+                                    });
+                                }}
                                 text="My Projects"
-                                hrefId="#projects-section"
                                 darkTheme={darkTheme}
                                 svgDirection="down"
                             />
                         }
                     >
-                        <Subtitle text="Hi there, I am" />
+                        <Subtitle text="Hi there, I am" emoji="👋" />
                         <BigTitle
                             style={{ padding: '.5rem 0' }}
                             text="Stefan Hadzhiev"

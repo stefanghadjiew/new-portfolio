@@ -7,6 +7,8 @@ import {
     FiChevronLeft,
 } from 'react-icons/fi';
 
+//FIXME: rename component to ButtonSectionLink
+
 export const CustomLink = ({
     text,
     hrefId,
@@ -30,8 +32,10 @@ export const CustomLink = ({
     };
 
     return (
+        //FIXME: replace <a> with <button> and fix styles
         <a
-            href={hrefId}
+            /* href={null} */
+            onClick={onClick}
             className={`${styles['link']} ${
                 darkTheme
                     ? styles['link--dark-theme']

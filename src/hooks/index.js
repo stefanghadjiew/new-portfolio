@@ -1,4 +1,5 @@
 import { useState, useEffect, useId } from 'react';
+import { isElementInView } from 'utils';
 
 export const usePortal = () => {
     const [loaded, setLoaded] = useState(false);
@@ -13,7 +14,32 @@ export const usePortal = () => {
         return () => {
             document.getElementsByTagName('body')[0].removeChild(div);
         };
-    }, []);
+    }, [portalId]);
 
     return { loaded, portalId };
+};
+
+export const useCurrentSectionInView = () => {
+    const [currentSectionInViewId, setCurrentSectionInViewId] =
+        useState('home-section');
+
+    useEffect(() => {
+        const allSections = document.querySelectorAll('section');
+        const setHashToCurrentSectionId = () => {
+            allSections.forEach(section => {
+                if (isElementInView(section)) {
+                    setCurrentSectionInViewId(section.id);
+                }
+            });
+        };
+        window.addEventListener('scroll', setHashToCurrentSectionId);
+        return () => {
+            window.removeEventListener(
+                'scroll',
+                setHashToCurrentSectionId
+            );
+        };
+    }, [currentSectionInViewId]);
+
+    return [currentSectionInViewId];
 };

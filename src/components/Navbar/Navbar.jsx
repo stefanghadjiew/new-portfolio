@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { AiFillHome, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import { MdFileDownload } from 'react-icons/md';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { IconButton } from 'components';
 import { FaFacebookF } from 'react-icons/fa';
 import { BsFillSunFill } from 'react-icons/bs';
@@ -9,13 +8,6 @@ import { GiMoon } from 'react-icons/gi';
 
 export const Navbar = ({ darkTheme, changeTheme }) => {
     const buttons = [
-        {
-            id: 'home',
-            icon: (
-                <AiFillHome className={darkTheme && 'svg--dark-theme'} />
-            ),
-            tooltip: 'Home',
-        },
         {
             id: 'github',
             icon: (
@@ -31,15 +23,6 @@ export const Navbar = ({ darkTheme, changeTheme }) => {
                 />
             ),
             tooltip: 'LinkedIn',
-        },
-        {
-            id: 'resume',
-            icon: (
-                <MdFileDownload
-                    className={darkTheme && 'svg--dark-theme'}
-                />
-            ),
-            tooltip: 'My resume',
         },
         {
             id: 'facebook',

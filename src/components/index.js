@@ -10,3 +10,4 @@ export * from './Technologies';
 export * from './CustomLink';
 export * from './ScrollToTopButton';
 export * from './Emoji';
+export * from './NavigationDots';
