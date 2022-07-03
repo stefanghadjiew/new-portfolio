@@ -2,7 +2,7 @@ import React from 'react';
 import { Section, Grid } from 'containers';
 import styles from './styles.module.scss';
 import { Card } from 'components';
-import { projects } from 'projects';
+import { projects } from 'staticResources';
 
 export const Projects = ({ darkTheme }) => {
     const projectCards = projects.map(project => (

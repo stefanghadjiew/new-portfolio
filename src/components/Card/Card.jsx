@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import { Divider, Image, IconButton } from 'components';
-import { projects } from 'projects';
-import { projectActions } from 'projectActions';
+import { projectActions, projects } from 'staticResources';
 
 export const Card = ({ darkTheme, title, backgroundImage }) => {
     const currentProject = projects.filter(

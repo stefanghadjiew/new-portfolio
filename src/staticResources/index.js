@@ -14,7 +14,7 @@ import {
     SiHtml5,
 } from 'react-icons/si';
 
-export const technologiesIcons = {
+const technologiesIcons = {
     ReactJs: <FaReact className="icon react" />,
     NodeJs: <FaNodeJs className="icon node" />,
     MongoDB: <SiMongodb className="icon mongo" />,

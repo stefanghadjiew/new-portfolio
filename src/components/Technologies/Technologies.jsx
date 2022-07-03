@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { renderTechnologiesIcons } from 'renderTechnologies';
+import { renderTechnologiesIcons } from 'staticResources';
 
 export const Technologies = () => {
     return (
