@@ -4,7 +4,7 @@ import { Divider, Subtitle, BigTitle, CustomLink } from 'components';
 import styles from './styles.module.scss';
 import { AiFillPhone } from 'react-icons/ai';
 import { MdLocationOn, MdEmail } from 'react-icons/md';
-import { personalInfo } from 'personalInfo';
+import { personalInfo } from 'staticResources';
 import { scrollToSection } from 'utils';
 
 export const Home = ({
