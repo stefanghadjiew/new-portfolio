@@ -1,0 +1,50 @@
+.contact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .textarea__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        & label {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    textarea {
+        resize: none;
+        width: 90%;
+        margin-bottom: 1rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: var(--white-color);
+        padding: 1rem;
+        border: 0;
+        transition: outline 0.2s ease-in-out,
+            outline-offset 0.2s ease-in-out;
+
+        &:hover,
+        &:focus {
+            outline: 2px solid white;
+            outline-offset: -2px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .divider__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
