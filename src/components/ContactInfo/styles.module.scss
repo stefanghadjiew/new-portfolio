@@ -1,0 +1,16 @@
+.contacts {
+    svg {
+        vertical-align: middle;
+    }
+
+    .email,
+    .location,
+    .phone {
+        margin: 0 0 1rem 0;
+
+        &--enableBackground {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+        }
+    }
+}

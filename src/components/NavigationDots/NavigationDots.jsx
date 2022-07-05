@@ -10,6 +10,7 @@ export const NavigationDots = ({ darkTheme }) => {
         'home-section',
         'about-section',
         'projects-section',
+        'contacts-section',
     ];
 
     const renderNavigationDots = navigationSectionsIds.map(
