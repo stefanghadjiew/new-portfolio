@@ -1,18 +1,31 @@
-import React from 'react';
-import { Section, Grid } from 'containers';
-import styles from './styles.module.scss';
+import React, { useState } from 'react';
+import { Section, CardContainer, Carousel } from 'containers';
+
 import { Card } from 'components';
 import { projects } from 'staticResources';
 
 export const Projects = ({ darkTheme }) => {
-    const projectCards = projects.map(project => (
-        <Card
-            key={project.id}
-            title={project.title}
-            darkTheme={darkTheme}
-            backgroundImage={project.backgroundImage}
-        />
-    ));
+    const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+
+    const handlePreviousClick = () => {
+        if (currentProjectIndex === 0) return;
+        setCurrentProjectIndex(currentProjectIndex - 1);
+    };
+    const handleNextClick = () => {
+        if (currentProjectIndex === projects.length - 2) return;
+        setCurrentProjectIndex(currentProjectIndex + 1);
+    };
+
+    const projectCards = projects
+        .slice(currentProjectIndex, currentProjectIndex + 2)
+        .map(project => (
+            <Card
+                key={project.id}
+                title={project.title}
+                darkTheme={darkTheme}
+                backgroundImage={project.backgroundImage}
+            />
+        ));
 
     return (
         <Section
@@ -23,17 +36,23 @@ export const Projects = ({ darkTheme }) => {
             height="100vh"
         >
             <div className="full-container-height flex-center even-large-padding-x">
-                <div className={styles['content']}>
-                    <div
-                        className={`${styles['grid__wrapper']} ${
-                            darkTheme
-                                ? styles['grid__wrapper--dark-theme']
-                                : ''
-                        }`}
+                <CardContainer
+                    darkTheme={darkTheme}
+                    disableChildrenMargin={true}
+                >
+                    <Carousel
+                        width="100%"
+                        height="100%"
+                        disablePreviousButton={currentProjectIndex === 0}
+                        disableNextButton={
+                            currentProjectIndex === projects.length - 2
+                        }
+                        previousButtonClickHandler={handlePreviousClick}
+                        nextButtonClickHandler={handleNextClick}
                     >
-                        <Grid darkTheme={darkTheme}>{projectCards}</Grid>
-                    </div>
-                </div>
+                        {projectCards}
+                    </Carousel>
+                </CardContainer>
             </div>
         </Section>
     );
