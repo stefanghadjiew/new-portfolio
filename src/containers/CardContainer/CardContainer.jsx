@@ -4,6 +4,7 @@ import styles from './styles.module.scss';
 export const CardContainer = ({
     children,
     darkTheme,
+    disableChildrenMargin = false,
     setOpenPortal,
     setBackdropComponent,
     bottomChild = null,
@@ -24,7 +25,13 @@ export const CardContainer = ({
                         : ''
                 }`}
             >
-                <div className="block-mg-6-l">{children}</div>
+                <div
+                    className={
+                        !disableChildrenMargin ? 'block-mg-6-l' : ''
+                    }
+                >
+                    {children}
+                </div>
             </div>
             <div className={styles['card__container__left-element']} />
             <div className={styles['card__container__bottom-element']}>

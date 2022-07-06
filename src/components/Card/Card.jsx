@@ -21,22 +21,18 @@ export const Card = ({ darkTheme, title, backgroundImage }) => {
     ));
 
     return (
-        <div
-            className={`${styles['card__wrapper']} ${
-                darkTheme && styles['card__wrapper-dark-theme']
-            }`}
-        >
+        <div className={styles['card__wrapper']}>
             <div className={styles.card}>
                 <Image src={backgroundImage} />
 
                 <div className={styles['card__content']}>
                     <div
                         className={`${
-                            styles['card__content-technologies']
+                            styles['card__content__technologies']
                         } ${
                             darkTheme
                                 ? styles[
-                                      'card__content-technologies-dark-theme'
+                                      'card__content-technologies--dark-theme'
                                   ]
                                 : ''
                         }`}
@@ -46,13 +42,15 @@ export const Card = ({ darkTheme, title, backgroundImage }) => {
                 </div>
                 <div
                     className={`${styles['card__actions']} ${
-                        darkTheme ? styles['card__actions-dark-theme'] : ''
+                        darkTheme
+                            ? styles['card__actions--dark-theme']
+                            : ''
                     }`}
                 >
                     {renderActionsButtons}
                 </div>
             </div>
-            <div className={styles['card__bottom-tittle']}>
+            <div className={styles['card__wrapper__bottom-tittle']}>
                 <Divider width={'100px'} margin={'0 1rem 0 0'} />
                 {title}
             </div>
