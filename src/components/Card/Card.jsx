@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { Divider, Image, IconButton } from 'components';
+import { Divider, Image, IconButton, Paragraph } from 'components';
 import { projectActions, projects } from 'staticResources';
 
 export const Card = ({ darkTheme, title, backgroundImage }) => {
@@ -21,7 +21,11 @@ export const Card = ({ darkTheme, title, backgroundImage }) => {
     ));
 
     return (
-        <div className={styles['card__wrapper']}>
+        <div
+            className={`${styles['card__wrapper']} ${
+                darkTheme ? 'dark-theme' : ''
+            }`}
+        >
             <div className={styles.card}>
                 <Image src={backgroundImage} />
 
@@ -52,7 +56,7 @@ export const Card = ({ darkTheme, title, backgroundImage }) => {
             </div>
             <div className={styles['card__wrapper__bottom-tittle']}>
                 <Divider width={'100px'} margin={'0 1rem 0 0'} />
-                {title}
+                <Paragraph text={title} style={{ margin: 0 }} />
             </div>
         </div>
     );

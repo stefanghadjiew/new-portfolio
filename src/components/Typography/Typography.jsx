@@ -18,25 +18,25 @@ export const Title = ({ text, style }) => {
     );
 };
 
-export const Subtitle = ({ text, type = 'h3', emoji }) => {
+export const Subtitle = ({ text, type = 'h3', emoji, style }) => {
     return (
         <div className={styles.subtitle}>
             {type === 'h3' ? (
-                <h3>
+                <h3 style={style}>
                     {emoji && <Emoji emoji={emoji} />}
                     {text}
                 </h3>
             ) : (
-                <h4>{text}</h4>
+                <h4 style={style}>{text}</h4>
             )}
         </div>
     );
 };
 
-export const Paragraph = ({ text }) => {
+export const Paragraph = ({ text, style }) => {
     return (
         <div className={styles.paragraph}>
-            <p>{text}</p>
+            <p style={style}>{text}</p>
         </div>
     );
 };

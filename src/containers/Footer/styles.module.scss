@@ -1,0 +1,28 @@
+.footer-wrapper {
+    height: 100vh;
+    padding: 2rem;
+
+    .footer {
+        display: flex;
+        width: 100%;
+        padding: 2rem 2rem 2rem calc(200px + 6rem);
+        /* background-color: var(--lighter-blue-color); */
+
+        &-inner-wrapper {
+            flex-wrap: wrap;
+            display: flex;
+            gap: 4rem;
+        }
+
+        &__personal-details {
+            max-width: 20rem;
+            p {
+                font-weight: 500;
+            }
+
+            .all-rights {
+                margin-top: 10rem;
+            }
+        }
+    }
+}
