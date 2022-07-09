@@ -1,0 +1,31 @@
+.button-link {
+    position: relative;
+    border: 0;
+    outline: 0;
+    background: 0;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: inherit;
+    transition: border-bottom 0.2s ease-in-out;
+    cursor: pointer;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: var(--light-red-color);
+        left: 0;
+        bottom: 0;
+        transition: width 0.2s ease-in-out;
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+
+    &--dark-theme {
+        color: var(--dark-blue-color);
+    }
+}

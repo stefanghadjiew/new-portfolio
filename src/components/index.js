@@ -13,3 +13,4 @@ export * from './Emoji';
 export * from './NavigationDots';
 export * from './ContactInfo';
 export * from './Input';
+export * from './ButtonLink';
