@@ -1,4 +1,4 @@
-import { useState, useEffect, useId } from 'react';
+import { useState, useEffect } from 'react';
 import { isElementInView, validateInput } from 'utils';
 
 export const useInput = initialValue => {
@@ -28,7 +28,7 @@ export const useInput = initialValue => {
 
 export const usePortal = () => {
     const [loaded, setLoaded] = useState(false);
-    const portalId = `backdrop-portal-${useId()}`;
+    const portalId = `backdrop-portal`;
 
     useEffect(() => {
         const div = document.createElement('div');

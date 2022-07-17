@@ -1,12 +1,13 @@
-.technologies-wrapper {
+.technologies {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
-    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
 
-    svg {
-        height: 32px;
-        width: 32px;
-        vertical-align: middle;
+    &--dark-theme {
+        border: 1px solid var(--white-color);
     }
 }

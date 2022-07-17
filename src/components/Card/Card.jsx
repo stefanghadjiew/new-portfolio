@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import { Divider, Image, IconButton, Paragraph } from 'components';
-import { projectActions, projects } from 'staticResources';
+import { projectActions } from 'staticResources';
 
-export const Card = ({ darkTheme, title, backgroundImage }) => {
-    const currentProject = projects.filter(
-        project => project.title === title
-    )[0];
-
+export const Card = ({
+    darkTheme,
+    title,
+    backgroundImage,
+    onClickHandler,
+}) => {
     const actions = projectActions(darkTheme);
 
     const renderActionsButtons = actions.map(action => (
@@ -25,25 +26,10 @@ export const Card = ({ darkTheme, title, backgroundImage }) => {
             className={`${styles['card__wrapper']} ${
                 darkTheme ? 'dark-theme' : ''
             }`}
+            onClick={onClickHandler}
         >
             <div className={styles.card}>
                 <Image src={backgroundImage} />
-
-                <div className={styles['card__content']}>
-                    <div
-                        className={`${
-                            styles['card__content__technologies']
-                        } ${
-                            darkTheme
-                                ? styles[
-                                      'card__content-technologies--dark-theme'
-                                  ]
-                                : ''
-                        }`}
-                    >
-                        {currentProject.technologies}
-                    </div>
-                </div>
                 <div
                     className={`${styles['card__actions']} ${
                         darkTheme

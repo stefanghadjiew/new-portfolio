@@ -14,3 +14,5 @@ export * from './NavigationDots';
 export * from './ContactInfo';
 export * from './Input';
 export * from './ButtonLink';
+export * from './DisplayProject';
+export * from './TechnologyCard';

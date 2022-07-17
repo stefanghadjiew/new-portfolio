@@ -2,8 +2,9 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { Subtitle, Paragraph, Divider, ButtonLink } from 'components';
 import { footerInfo } from 'staticResources';
+import { assignClasses } from 'utils';
 
-export const Footer = ({ darkTheme }) => {
+export const Footer = ({ classes = [] }) => {
     const renderSitemap = footerInfo.sitemap.sections.map(
         (section, index) => (
             <li key={section + index} style={{ padding: '.25rem 0' }}>
@@ -19,19 +20,18 @@ export const Footer = ({ darkTheme }) => {
     ));
 
     return (
-        <div
+        <footer
             id="footer"
-            className={`${styles['footer-wrapper']} flex-center ${
-                darkTheme ? 'dark-theme' : 'light-theme'
-            }`}
+            className={[
+                assignClasses(classes),
+                `${styles['footer-wrapper']}`,
+            ].join(' ')}
         >
             <div className={styles['footer']}>
                 <div className={styles['footer-inner-wrapper']}>
                     <div className={styles['footer__personal-details']}>
                         <Subtitle
-                            style={{
-                                fontWeight: 'bold',
-                            }}
+                            className="bold"
                             text="Stefan G. Hadzhiev"
                         />
                         <Divider width="100%" />
@@ -47,25 +47,21 @@ export const Footer = ({ darkTheme }) => {
                     <div className={styles['footer__site-map']}>
                         <Subtitle
                             text="Sitemap"
-                            style={{
-                                fontWeight: 'bold',
-                                marginBottom: '3rem',
-                            }}
+                            classes={['bold', 'mg-b-3']}
                         />
                         <ul>{renderSitemap}</ul>
                     </div>
                     <div className={styles['footer__projects']}>
                         <Subtitle
                             text="Projects"
-                            style={{
-                                fontWeight: 'bold',
-                                marginBottom: '3rem',
-                            }}
+                            classes={['mg-b-3', 'bold']}
                         />
-                        <ul>{renderProjects}</ul>
+                        <menu>
+                            <ul>{renderProjects}</ul>
+                        </menu>
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };

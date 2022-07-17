@@ -29,7 +29,7 @@ export const About = ({ darkTheme }) => {
                         />
                     }
                 >
-                    <Paragraph text={aboutMeSubtitle} />
+                    <Paragraph text={aboutMeSubtitle} className="mg-r-4" />
                 </CardContainer>
             </div>
         </Section>

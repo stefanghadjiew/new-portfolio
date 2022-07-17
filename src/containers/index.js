@@ -7,3 +7,4 @@ export * from './BackdropPortal';
 export * from './Carousel';
 export * from './Grid';
 export * from './Form';
+export * from './FlexContainer';

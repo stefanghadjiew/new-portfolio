@@ -1,11 +1,16 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { renderTechnologiesIcons } from 'staticResources';
+import { TechnologyCard } from 'components';
 
-export const Technologies = () => {
+export const Technologies = ({ technologies, darkTheme, width }) => {
     return (
-        <div className={styles['technologies-wrapper']}>
-            {renderTechnologiesIcons}
+        <div style={{ width }} className={styles['technologies']}>
+            {technologies.map((technology, i) => (
+                <TechnologyCard
+                    technology={technology}
+                    key={technology.id}
+                />
+            ))}
         </div>
     );
 };

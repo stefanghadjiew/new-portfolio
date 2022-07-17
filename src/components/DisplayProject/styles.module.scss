@@ -1,0 +1,15 @@
+.display-project {
+    padding: 8rem;
+    width: 100%;
+    height: fit-content;
+
+    .description-paragraph {
+        opacity: 0.7;
+        max-width: calc(100% - 34rem);
+    }
+
+    .reason-paragraph {
+        opacity: 0.7;
+        max-width: 30rem;
+    }
+}

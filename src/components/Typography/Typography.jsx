@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styles from './styles.module.scss';
 import { Emoji } from 'components';
+import { assignClasses } from 'utils';
+
+//TODO: Remove all inline styles from the component
 
 export const BigTitle = ({ text, type = 'h1', style }) => {
     return (
@@ -10,33 +13,67 @@ export const BigTitle = ({ text, type = 'h1', style }) => {
     );
 };
 
-export const Title = ({ text, style }) => {
+export const Title = ({ text, style, className, classes }) => {
     return (
-        <div style={style} className={styles.title}>
-            <h2>{text}</h2>
-        </div>
+        <h2
+            style={style}
+            className={[
+                className,
+                assignClasses(classes),
+                styles.title,
+                'pt-5',
+            ].join(' ')}
+        >
+            {text}
+        </h2>
     );
 };
 
-export const Subtitle = ({ text, type = 'h3', emoji, style }) => {
+export const Subtitle = ({
+    text,
+    type = 'h3',
+    emoji,
+    style,
+    classes,
+    className,
+}) => {
     return (
-        <div className={styles.subtitle}>
+        <Fragment>
             {type === 'h3' ? (
-                <h3 style={style}>
+                <h3
+                    className={[
+                        'f-400',
+                        className,
+                        assignClasses(classes),
+                    ].join(' ')}
+                    style={style}
+                >
                     {emoji && <Emoji emoji={emoji} />}
                     {text}
                 </h3>
             ) : (
-                <h4 style={style}>{text}</h4>
+                <h4
+                    className={['f-400', assignClasses(classes)].join(' ')}
+                    style={style}
+                >
+                    {text}
+                </h4>
             )}
-        </div>
+        </Fragment>
     );
 };
 
-export const Paragraph = ({ text, style }) => {
+export const Paragraph = ({ style, text, className, classes }) => {
     return (
-        <div className={styles.paragraph}>
-            <p style={style}>{text}</p>
-        </div>
+        <p
+            style={style}
+            className={[
+                styles.paragraph,
+                assignClasses(classes),
+                className,
+            ].join(' ')}
+        >
+            {text}
+        </p>
     );
 };

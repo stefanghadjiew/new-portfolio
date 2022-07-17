@@ -13,6 +13,9 @@ export const scrollToSection = ({ sectionId }) => {
     sectionToScrollTo.scrollIntoView();
 };
 
+export const assignClasses = (classes = []) =>
+    classes.length <= 1 ? classes : [...classes].join(' ');
+
 export const validateInput = (type, value) => {
     let error;
     switch (type) {
