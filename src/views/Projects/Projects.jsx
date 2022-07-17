@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { Section, CardContainer, Carousel } from 'containers';
 
-import { Card } from 'components';
+import { Card, DisplayProject } from 'components';
 import { projects } from 'staticResources';
 
-export const Projects = ({ darkTheme }) => {
+export const Projects = ({
+    darkTheme,
+    setOpenPortal,
+    setBackdropComponent,
+}) => {
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
     const handlePreviousClick = () => {
@@ -20,6 +24,18 @@ export const Projects = ({ darkTheme }) => {
         .slice(currentProjectIndex, currentProjectIndex + 2)
         .map(project => (
             <Card
+                onClickHandler={() => {
+                    setOpenPortal(true);
+                    document.querySelector('body').style.overflow =
+                        'hidden';
+                    setBackdropComponent(
+                        <DisplayProject
+                            setOpenPortal={setOpenPortal}
+                            setBackdropComponent={setBackdropComponent}
+                            darkTheme={darkTheme}
+                        />
+                    );
+                }}
                 key={project.id}
                 title={project.title}
                 darkTheme={darkTheme}

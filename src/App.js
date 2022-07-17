@@ -22,7 +22,11 @@ function App() {
                 setBackdropComponent={setBackdropComponent}
             />
             <About darkTheme={darkTheme} />
-            <Projects darkTheme={darkTheme} />
+            <Projects
+                darkTheme={darkTheme}
+                setOpenPortal={setOpenPortal}
+                setBackdropComponent={setBackdropComponent}
+            />
             <Contact darkTheme={darkTheme} />
             <BackdropPortal
                 openPortal={openPortal}
@@ -31,7 +35,14 @@ function App() {
                 setBackdropComponent={setBackdropComponent}
             />
             <ScrollToTopButton darkTheme={darkTheme} />
-            <Footer darkTheme={darkTheme} />
+            <Footer
+                darkTheme={darkTheme}
+                classes={[
+                    'flex-center',
+                    'footer-padding',
+                    `${darkTheme ? 'dark-theme' : 'light-theme'}`,
+                ]}
+            />
         </Fragment>
     );
 }

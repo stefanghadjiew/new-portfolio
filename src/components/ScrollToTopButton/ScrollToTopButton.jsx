@@ -3,19 +3,22 @@ import styles from './styles.module.scss';
 import { IconButton } from 'components';
 import { FiChevronUp } from 'react-icons/fi';
 
-export const ScrollToTopButton = ({ darkTheme }) => {
+export const ScrollToTopButton = ({
+    darkTheme,
+    inBackdropPortal = false,
+}) => {
     const [visible, setVisible] = useState(false);
 
-    const toggleVisible = () => {
-        const scrolled = document.documentElement.scrollTop;
-        if (scrolled > 300) {
-            setVisible(true);
-        } else if (scrolled <= 300) {
-            setVisible(false);
-        }
-    };
-
     useEffect(() => {
+        const toggleVisible = () => {
+            const scrolled = document.documentElement.scrollTop;
+            if (scrolled > 300) {
+                setVisible(true);
+            } else if (scrolled <= 300) {
+                setVisible(false);
+            }
+        };
+
         window.addEventListener('scroll', toggleVisible, {
             passive: true,
         });

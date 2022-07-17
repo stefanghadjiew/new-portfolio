@@ -7,9 +7,11 @@ export const IconButton = ({
     onClick,
     darkTheme,
     disabled,
+    style,
 }) => {
     return (
         <button
+            style={style}
             disabled={disabled}
             className={`${styles['button']} ${
                 darkTheme

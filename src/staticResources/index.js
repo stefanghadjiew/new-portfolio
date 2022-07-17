@@ -14,6 +14,8 @@ import {
     SiHtml5,
 } from 'react-icons/si';
 
+const { personalOrganizerImages } = images;
+
 const technologiesIcons = {
     ReactJs: <FaReact className="icon react" />,
     NodeJs: <FaNodeJs className="icon node" />,
@@ -28,11 +30,29 @@ const technologiesIcons = {
     Html: <SiHtml5 className="icon html" />,
 };
 
+export const experience = {
+    ReactJs: '3+ Years working',
+    NodeJs: '2+ Years personal',
+    MongoDB: '2+ Years personal',
+    ExpressJs: '2+ Years personal',
+    SASS: '2+ Years working',
+    MUI: '2+ Years working',
+    CSS3: '3+ Years working',
+    Javascript: '3+ Years working',
+    Cypress: '2+ Years working',
+    Jest: '1 Year personal',
+    Html: '3+ Years working',
+};
+
 const projectTitles = {
-    PersonalOrganizer: 'PersonalOrganizer',
+    PersonalOrganizer: 'Personal Organizer',
     BudgetPlanner: 'Budget Planner',
     Photoverse: 'Photoverse',
     Portfolio: 'Portfolio',
+    ChatApp: 'Chat App',
+    MovieApp: 'Movie App',
+    DietExercises: 'Diet&Exercises',
+    Game: 'Game',
 };
 
 export const projects = [
@@ -41,15 +61,51 @@ export const projects = [
         title: projectTitles.PersonalOrganizer,
         backgroundImage: images.personalOrganizer,
         technologies: [
-            technologiesIcons.CSS3,
-            technologiesIcons.Cypress,
-            technologiesIcons.ExpressJs,
-            technologiesIcons.Jest,
-            technologiesIcons.MongoDB,
-            technologiesIcons.NodeJs,
-            technologiesIcons.ReactJs,
-            technologiesIcons.Javascript,
-            technologiesIcons.Html,
+            {
+                id: 1,
+                icon: technologiesIcons.CSS3,
+                experience: experience.CSS3,
+            },
+            {
+                id: 2,
+                icon: technologiesIcons.Cypress,
+                experience: experience.Cypress,
+            },
+            {
+                id: 3,
+                icon: technologiesIcons.ExpressJs,
+                experience: experience.ExpressJs,
+            },
+            {
+                id: 4,
+                icon: technologiesIcons.Jest,
+                experience: experience.Jest,
+            },
+            {
+                id: 5,
+                icon: technologiesIcons.MongoDB,
+                experience: experience.MongoDB,
+            },
+            {
+                id: 6,
+                icon: technologiesIcons.NodeJs,
+                experience: experience.NodeJs,
+            },
+            {
+                id: 7,
+                icon: technologiesIcons.ReactJs,
+                experience: experience.ReactJs,
+            },
+            {
+                id: 8,
+                icon: technologiesIcons.Javascript,
+                experience: experience.Javascript,
+            },
+            {
+                id: 9,
+                icon: technologiesIcons.Html,
+                experience: experience.Html,
+            },
         ],
     },
     {
@@ -158,12 +214,23 @@ export const footerInfo = {
         sections: ['Home', 'About', 'Projects', 'Contact'],
     },
     projects: [
-        'Personal Organizer',
-        'Budget Planner',
-        'Photoverse',
-        'Chat App',
-        'Movie App',
-        'Diet&Exercises',
-        'Game',
+        projectTitles.PersonalOrganizer,
+        projectTitles.BudgetPlanner,
+        projectTitles.Photoverse,
+        projectTitles.ChatApp,
+        projectTitles.MovieApp,
+        projectTitles.DietExercises,
+        projectTitles.Game,
     ],
+};
+
+export const displayProjectsInfo = {
+    PersonalOrganizer: {
+        title: projectTitles.PersonalOrganizer,
+        images: personalOrganizerImages,
+        reason: 'This is one of the projects that I created for personal use. I like to learn and there is just too much information about any topic. It was hard for me to have articles,videos or blogs open in many browser windows so that I can read/watch them when I have the time. On many occasions, due to different reasons, I might find something well structured and explained, but than after some time I want to re-visit the topic and am unable to recall where I found it in the first place. So the problem that I tried to solve for myself - create a personal collection of useful resources on different topics, so that I can re-visit at any point in time. Structured, personalized and easy to use -> build my knowledge on my own paste and time 🥳',
+        description:
+            'The project is created with the MERN stack. It has user authentication/authorization with JWT`s(implementig Google login aswell). The Express application linked to mongoDB database serves data to the React application. The route for creating a new resource utilizes a link-preview-generator package for creating a link preview for each url provided by the client. It is not always possible,but a fallback mechanism is implemented -> if the request fails with specifically provided error message, the create-resource dialog provides the client with the opportunity to type all the necessary information by hand. Caching mechanism is implemented for the Express application. Error handling for all unsuccessful scenarios that I was capable of thinking -> both on the frontend and the backend. Input sanitization, search and enable/disable buttons based on met requirements for inputs, light and dark theme, pagination (only on the frontend) with possibility to choose number of resources being displayed, Video player for video resources , fully responsive, 404 Page. React Context for state management. E2E tests with Cypress + integration tests with Jest and React testing library. All routes (client) basically display the same page with the exception of the Projects page, which was also the most fun and challenging to create. It is like a very tiny Jira -> a user can create a Project and add Tasks and Subtasks, which can be marked as done after they are finished. Every Task/Subtask can also be given one or more Tags, marking their type(bug, improvement, test), status (in progress, investigate, up next etc...) or priority (high priority, blocker) 🔥',
+        finalThoughts: '',
+    },
 };
