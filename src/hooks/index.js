@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { isElementInView, validateInput } from 'utils';
 
 export const useInput = initialValue => {
@@ -45,26 +45,34 @@ export const usePortal = () => {
 };
 
 export const useCurrentSectionInView = () => {
+    //TODO: refactor this code
     const [currentSectionInViewId, setCurrentSectionInViewId] =
-        useState('home-section');
+        useState(null);
+    const isInitialRenderRef = useRef(true);
 
     useEffect(() => {
-        const allSections = document.querySelectorAll('section');
-        const setHashToCurrentSectionId = () => {
+        const allSections = [...document.querySelectorAll('section')];
+        const footer = document.getElementById('footer');
+        const setCurrentSectionInView = () => {
+            if (isElementInView(footer)) {
+                setCurrentSectionInViewId(null);
+            }
             allSections.forEach(section => {
                 if (isElementInView(section)) {
                     setCurrentSectionInViewId(section.id);
                 }
             });
         };
-        window.addEventListener('scroll', setHashToCurrentSectionId);
+        if (isInitialRenderRef.current) {
+            setCurrentSectionInView();
+            isInitialRenderRef.current = false;
+        }
+
+        window.addEventListener('scroll', setCurrentSectionInView);
         return () => {
-            window.removeEventListener(
-                'scroll',
-                setHashToCurrentSectionId
-            );
+            window.removeEventListener('scroll', setCurrentSectionInView);
         };
     }, [currentSectionInViewId]);
 
-    return [currentSectionInViewId];
+    return [currentSectionInViewId, setCurrentSectionInViewId];
 };

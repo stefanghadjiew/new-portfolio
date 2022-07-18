@@ -10,7 +10,7 @@ export * from './Technologies';
 export * from './CustomLink';
 export * from './ScrollToTopButton';
 export * from './Emoji';
-export * from './NavigationDots';
+export * from './Navigation';
 export * from './ContactInfo';
 export * from './Input';
 export * from './ButtonLink';

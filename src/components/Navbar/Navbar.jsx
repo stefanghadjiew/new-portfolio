@@ -6,6 +6,7 @@ import { FaFacebookF } from 'react-icons/fa';
 import { BsFillSunFill } from 'react-icons/bs';
 import { GiMoon } from 'react-icons/gi';
 
+//TODO: This is not a nav bar! FIX IT
 export const Navbar = ({ darkTheme, changeTheme }) => {
     const buttons = [
         {

@@ -21,7 +21,7 @@ export const Title = ({ text, style, className, classes }) => {
                 className,
                 assignClasses(classes),
                 styles.title,
-                'pt-5',
+                'pt-3',
             ].join(' ')}
         >
             {text}
