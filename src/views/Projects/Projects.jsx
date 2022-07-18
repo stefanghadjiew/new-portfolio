@@ -16,12 +16,12 @@ export const Projects = ({
         setCurrentProjectIndex(currentProjectIndex - 1);
     };
     const handleNextClick = () => {
-        if (currentProjectIndex === projects.length - 2) return;
+        if (currentProjectIndex === projects.length - 1) return;
         setCurrentProjectIndex(currentProjectIndex + 1);
     };
 
     const projectCards = projects
-        .slice(currentProjectIndex, currentProjectIndex + 2)
+        .slice(currentProjectIndex, currentProjectIndex + 1)
         .map(project => (
             <Card
                 onClickHandler={() => {
@@ -61,10 +61,12 @@ export const Projects = ({
                         height="100%"
                         disablePreviousButton={currentProjectIndex === 0}
                         disableNextButton={
-                            currentProjectIndex === projects.length - 2
+                            currentProjectIndex === projects.length - 1
                         }
                         previousButtonClickHandler={handlePreviousClick}
                         nextButtonClickHandler={handleNextClick}
+                        currentProjectIndex={currentProjectIndex}
+                        setCurrentProjectIndex={setCurrentProjectIndex}
                     >
                         {projectCards}
                     </Carousel>

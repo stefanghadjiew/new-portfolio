@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { IconButton } from 'components';
+import { NavigationDots } from './NavigationDots';
+import { projects } from 'staticResources';
 
 export const Carousel = ({
     children,
@@ -11,6 +13,8 @@ export const Carousel = ({
     nextButtonClickHandler,
     disablePreviousButton,
     disableNextButton,
+    currentProjectIndex,
+    setCurrentProjectIndex,
 }) => {
     return (
         <div
@@ -39,6 +43,11 @@ export const Carousel = ({
                     onClick={nextButtonClickHandler}
                 />
             </div>
+            <NavigationDots
+                currentProjectIndex={currentProjectIndex}
+                projects={projects}
+                setCurrentProjectIndex={setCurrentProjectIndex}
+            />
         </div>
     );
 };
