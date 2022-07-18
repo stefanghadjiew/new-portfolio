@@ -41,7 +41,7 @@ export const Card = ({
                 </div>
             </div>
             <div className={styles['card__wrapper__bottom-tittle']}>
-                <Divider width={'100px'} margin={'0 1rem 0 0'} />
+                <Divider width={'40%'} margin={'0 1rem 0 0'} />
                 <Paragraph text={title} style={{ margin: 0 }} />
             </div>
         </div>
