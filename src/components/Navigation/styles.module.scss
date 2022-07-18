@@ -1,0 +1,38 @@
+.navigation__dots {
+    border-radius: 3rem;
+    /* background-color: var(--light-red-color); */
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.6rem;
+    padding: 0.5rem 1.5rem;
+    z-index: 4;
+
+    & ul {
+        display: flex;
+
+        & li {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: 0;
+                height: 2px;
+                background-color: var(--light-red-color);
+                width: 0;
+                transition: width 0.2s ease-in-out;
+            }
+
+            &.active:before {
+                width: 100%;
+            }
+        }
+    }
+}
